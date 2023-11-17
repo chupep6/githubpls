@@ -1,0 +1,579 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+.black-header {
+    background-color: #000;
+    max-width: 100%;
+    color: #fff;
+    padding: 0.5% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.brand {
+  display: flex;
+  align-items: center;
+  }
+  
+.logo img {
+  height: 3vw; 
+  }
+  
+.brand-name {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-left: -0.9%;
+  }
+  
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  }
+  
+nav ul li {
+  margin-right: 13%;
+  }
+  
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1vw;
+    transition: color 0.3s ease-in-out;
+  }
+  
+nav ul li a:hover {
+    color: #ff0101; 
+  }
+
+
+
+
+
+
+
+  .bot {
+    position: relative;
+  }
+  
+  
+  .img--bg {  
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 50%  ;
+  }
+  
+  .img-1bg {
+    width: 100%;
+    height: auto;
+  
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  
+  
+  .bot-txt {
+    font-weight: 30%;
+    font-size: 3vw;
+    color: white;
+    text-align: left;
+    position: absolute;
+    left: 10%;
+    margin-top: -50%;
+  
+    opacity: 0;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .bot-btn {
+    position: absolute;
+    left: -2%;
+    font-size: 60%;
+    padding: 4% 10%;
+    color: white;
+    text-decoration: none;  
+    display: inline-block;
+    margin: 2% 5%;
+    border-radius: 3%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5%;
+    background-image: linear-gradient(to right, #ff0101 0%, #610b0b 51%, #440909 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+  }
+  
+  .bot-btn:hover {
+    background-position: right center;
+  }
+
+
+
+
+
+               /* Стили для блока roadmap */
+
+               .roadmap {
+                position: absolute;     /* Устанавливаем абсолютную позицию */
+                top: 50%;               /* Устанавливаем отступ сверху (изменили с 1915px на 50%) */
+                font-family: "Roboto", Arial, sans-serif;  /* Задаем шрифт */
+                margin-top: 1%;         /* Устанавливаем отступ верхнего блока (изменили с 10px на 1%) */
+                width: 70vw;            /* Задаем детали 100% от родительского контейнера */
+                height: 100vw;            /* Задаем высоту блока (изменил с 1400px на 70%) */
+                max-height: 150vw;        /* Задаем поддержку высоты блока (изменил с 1500px на 75%) */
+                background-color: black;  /* Цвет фона - черный */
+            }
+
+                /* Стили для текстовых элементов */
+
+.text2 {
+    max-height: 200px;
+    position: relative;
+    bottom: 5px;
+    color: white;
+}
+
+.text3 {
+    max-height: 200px;
+    position: relative;
+    top: 22px;
+    color: white;
+}
+
+.text4 {
+    max-height: 200px;
+    color: white;
+    position: relative;
+    top: 48px;
+}
+
+.text5 {
+    color: white;
+    max-height: 200px;
+    position: relative;
+    top: 50px;
+}
+
+.text5 b {
+    position: relative;
+    top: 2px;
+    padding: 5px;
+    border-radius: 40px;
+    color: white;
+    font-size: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;                       /* Анимация при наведении */
+}
+
+              /* Стили для маркеров прогресса */
+
+.progress-text ol > li:before {
+    content: '1';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: yellow;
+}
+
+.progress-text ol {
+    position: relative;
+    right: 4vw;
+    bottom: 100px;
+    list-style: none;
+}
+
+.progress-text ol > li {
+    padding-left: 25px;
+    position: relative;
+    margin: 10px;
+}
+
+/* Стили для слайдера */
+
+#slider_bl {
+    height: 40vh;
+    position: relative;
+    left: 2vw;
+    top: 20vw;
+    width: 40vw;
+}
+
+#slider_bl .wrapper {
+    max-width: 100%;
+    margin: 6vw auto;          
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+}
+
+#slider_bl input {
+    display: none;
+}
+
+#slider_bl .inner {
+    width: 500%;
+    position: relative;
+    line-height: 0;
+}
+
+#slider_bl article {
+    width: 40vw;
+    float: left;
+    position: relative;
+}
+
+#slider_bl article img {
+  width: 30vw;
+  height: 15vw;
+}
+
+#slider_bl .slider-prev-next-control {
+    height: 1vw;                     /* Задаем высоту элементов управления (предыдущий/следующий) */
+    position: absolute;               /* Устанавливаем абсолютную позицию */
+    top: 2vw;                         /* Устанавливаем отступ сверху в 50% от родительского контейнера */
+    width: 40vw;                      /* Задаем ширину 100% от родительского контейнера */
+    transform: translateY(-50%);      /* Смещаем элементы управления на половину их высоты вверх, чтобы центрировать по вертикали */
+}
+
+#slider_bl .slider-prev-next-control label {
+    display: none;                      /* Скрываем метки (текст) для кнопок предыдущего/следующего слайда */
+    width: 100vw;                        /* Задаем ширину кнопок */
+    height: 10vw;                       /* Задаем высоту кнопок */
+    border-radius: 50%;                 /* Делаем круглые кнопки с помощью скругленных углов */
+    background: #fff;                 /* Задаем белый фон для кнопок */
+    opacity: .7;                        /* Начальная непрозрачность кнопок */
+    transition: opacity 0.3s ease;      /* Задаем плавный переход для свойства непрозрачности */
+}
+
+#slider_bl .slider-prev-next-control label:hover {
+    opacity: 1;
+}
+
+#slider_bl .slider-dot-control {
+    position: absolute;         /* Устанавливает абсолютную позицию, чтобы элемент был относительно родительского контейнера */
+    width: 100%;                /* Занимает 100% ширины родительского контейнера */
+    bottom: 0;                  /* Размещает элемент внизу контейнера */
+    text-align: center;         /* Выравнивает содержимое по центру горизонтально */
+}
+
+.slides .slider-dot-control label {
+    cursor: pointer;                     /* Индикатор, что элемент является интерактивным и реагирует на наведение курсора */
+    border-radius: 10px;                 /* Задает радиус скругления углов */
+    display: inline-block;               /* Устанавливает элемент как блочный, но остается в потоке, что позволяет выравнивать его горизонтально */
+    width: 15%;                        /* Задает ширину элемента */
+    height: 50%;                       /* Задает высоту элемента */
+    margin-left: 5%;                   /* Задает внешний отступ слева для создания отступа между индикаторами */
+    background: rgb(252, 0, 0);        /* Задает цвет фона элемента */
+    border: 2px solid #f30000;         /* Задает толщину и цвет границы элемента */
+    color: #f80707;                    /* Задает цвет текста элемента */
+    transition: all .3s;                 /* Задает анимацию для всех свойств с продолжительностью 0.3 секунды */
+    position: relative;                  /* Позиционирование относительно своего нормального положения */
+    top: 4vw;                          /* Поднимает элемент на 200 пикселей относительно его нормального положения */
+    opacity: .9;                         /* Задает прозрачность элемента (от 0 до 1) */
+}
+
+.slides .slider-dot-control label:hover {
+    transform: scale(1.05);
+    background-color: rgb(0, 0, 0);
+}
+
+#slider_bl .slider-wrapper {
+    width: 100%;                                        /* Занимает 100% ширины родительского контейнера */
+    position: relative;                                 /* Позиционируется относительно своего обычного положения */
+    bottom: 10vw;                                        /* Поднимает элемент на 20% относительно его нормального положения */
+    left: 30vw;                                          /* Смещает элемент влево на 78% относительно его нормального положения */
+    overflow: hidden;                                   /* Обрезает содержимое, выходящее за пределы элемента */
+    border-radius: 10px;                                /* Задает радиус скругления углов элемента */
+    background: #ff0000;                              /* Задает цвет фона элемента */
+    transition: all .5s cubic-bezier();                 /* Применяет анимацию ко всем свойствам с продолжительностью 0.5 секунды и заданным кривым времени */
+}
+
+#slider_bl .slider-wrapper .inner {
+    transform: translateZ(0);                           /* Применяет трехмерное пространственное преобразование - трансляцию по оси Z на 0 */
+    transition: all .8s cubic-bezier(.77, 0, .175, 1);  /* Применяет анимацию ко всем свойствам с продолжительностью 0.8 секунд и кривой времени cubic-bezier(.77, 0, .175, 1) */
+}
+
+#slider_bl #slide1:checked ~ .slider-wrapper .inner {
+    margin-left: 0;
+}
+
+#slider_bl #slide2:checked ~ .slider-wrapper .inner {
+    margin-left: -100%;
+}
+
+#slider_bl #slide3:checked ~ .slider-wrapper .inner {
+    margin-left: -200%;
+}
+
+#slider_bl #slide4:checked ~ .slider-wrapper .inner {
+    margin-left: -300%;
+}
+
+#slider_bl #slide6:checked ~ .slider-wrapper .inner {
+    margin-left: -300%;
+}
+
+#slider_bl #slide7:checked ~ .slider-wrapper .inner {
+    margin-left: 0;
+}
+
+#slider_bl #slide8:checked ~ .slider-wrapper .inner {
+    margin-left: -100%;
+}
+
+#slider_bl #slide9:checked ~ .slider-wrapper .inner {
+    margin-left: -200%;
+}
+
+.slides {
+    position: relative;              /* Устанавливает позиционирование относительно его обычного расположения */
+    top: -5%;                      /* Поднимает элемент на 95 пикселей выше его обычного местоположения */
+    width: 90%;                     /* Занимает 100% ширины родительского контейнера */
+    height: 1080px;                  /* Устанавливает высоту элемента в 1080 пикселей */
+    background-color: #000000;     /* Устанавливает цвет фона элемента в черный */
+}
+
+.slides {
+    position: relative;                   /* Устанавливает позиционирование относительно его обычного расположения */
+    top: -5%;                           /* Поднимает элемент на 95 пикселей выше его обычного местоположения */
+    width: 100%;                          /* Занимает 100% ширины родительского контейнера */
+    height: 1080px;                       /* Устанавливает высоту элемента в 1080 пикселей */
+    background-color: #000000;          /* Устанавливает цвет фона элемента в черный */
+    display: inline-block;                /* Превращает элемент в строчно-блочный, сохраняя возможность использования встроенного блока */
+    text-align: center;                   /* Устанавливает выравнивание текста внутри элемента по центру */
+}
+
+.slides b {
+    position: relative;                          /* Устанавливает позиционирование относительно его обычного расположения */
+    top: 2vw;                                   /* Поднимает элемент на 30 пикселей выше его обычного местоположения */
+    color: white;                              /* Задает цвет текста элемента - белый */
+    font-size: 2vw;                             /* Устанавливает размер шрифта элемента в 26 пикселей */
+    transition: color 0.3s ease;                 /* Добавляет анимацию перехода для свойства цвета текста */
+}
+
+            /* Анимации при наведении на кнопки */
+
+    .text5 b:hover,
+    .slides b:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.slides .slider-dot-control label:hover {
+    background-color: #000;
+}
+
+.slider-image{
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+  
+#image-container2 {
+    position: absolute; /* Абсолютное позиционирование для центрирования */
+    top: 50%; /* Размещение блока по вертикали в центре */
+    left: 50%; /* Размещение блока по горизонтали в центре */
+    transform: translate(-50%, -50%); /* Коррекция положения блока */
+    overflow: hidden; /* Исключение выхода содержимого за границы блока */
+    width: 100%; /* Занимает полную ширину родительского элемента */
+    max-width: 100vw; /* Ограничение максимальной ширины до ширины видимой области */
+    height: 100%; /* Занимает полную высоту родительского элемента */
+  }
+  
+  #image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+
+  #button-container {
+    position: absolute;
+   translate: (-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50vw;
+    right: 50vw;
+    z-index: 2; /* Поместите кнопку поверх изображения */
+}
+    
+  .button, .text {
+    padding: 1vw;
+    text-align: center;
+    transition: transform 0.5s;
+    text-decoration: none;
+    color: white;
+    font-size: 1vw;
+    z-index: 1;
+    display: inline-block;
+    padding: 2vw 2vw;
+    background-color: #ff0000;
+    color: rgb(132, 1, 1);
+    border-radius: 1vw;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+    
+  .button, .text:hover {
+    background-color: rgb(255, 0, 0); 
+    color: #ffffff; 
+    text-decoration: none; 
+  }
+  
+  #first:target {
+      display: block;
+      transform: translateX(2vw);
+  }
+    
+  #second:target {
+      display: block;
+      transform: translateY(10vw);
+  }
+    
+  #third:target {
+      display: block;
+      transform: translateX(-15vw);
+  }
+    
+    
+  #fourth:target {
+      display: block;
+      transform: translateY(-7vw);
+  }
+    
+  #reset:target .text {
+      display: none;
+  }
+    
+  #six:target {
+      display: block;
+      transform: translateX(12vw);
+  }
+    
+  #first{
+    padding: 3vw;
+    z-index: 20;
+  }
+    
+  #reset{
+    margin-top: 2vw;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #image-container2 {
+    position: relative;
+}
+
+#image-container2 img {
+    max-width: 100%;
+    max-height: 100vw;
+    width: 100%;
+    height: 100vw;
+    object-fit: cover;
+}
+
+
+
+
+footer {
+    background-color: #000000; 
+    color: white; 
+    padding: 6%; 
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .footer-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    flex-wrap: wrap; 
+    max-width: 100%; 
+    margin: 0 auto; 
+  }
+  
+  
+  .footer-text {
+    font-size: 2vw; 
+    white-space: nowrap; 
+    color: red;
+  } 
+
+
+
+
+    
+    
+        
+    
+   
+
+
+
+
+
+    
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+  
+  
